@@ -1,5 +1,10 @@
 class Content < ApplicationRecord
+
+  extend FriendlyId
+  friendly_id :titolo, use: :slugged
+
 	belongs_to :user
+   has_many :sales
 
   has_attached_file :cover
   validates_attachment_content_type :cover, content_type: /\Aimage\/.*\z/
@@ -9,7 +14,7 @@ class Content < ApplicationRecord
   message: "Formato non suportato"
 
   validates :titolo, :descrizione, :prezzo, presence: true
-  validates :prezzo, numericality: { grater_than: 0 }
+  validates :prezzo, numericality: { grater_than: 49 }
   validates :cover, attachment_presence: true
   validates :allegato, attachment_presence: true
 end
