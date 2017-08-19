@@ -101,6 +101,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    pg (0.21.0-x86-mingw32)
     puma (3.9.1)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -122,6 +123,11 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.0.3)
       actionpack (= 5.0.3)
       activesupport (= 5.0.3)
@@ -185,8 +191,10 @@ DEPENDENCIES
   jquery-rails
   materialize-sass
   paperclip (~> 5.0.0)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.3)
+  rails_12factor
   sass-rails (~> 5.0)
   sqlite3
   turbolinks (~> 5)
@@ -195,6 +203,9 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   will_paginate (~> 3.1.0)
   will_paginate-materialize
+
+RUBY VERSION
+   ruby 2.2.6p396
 
 BUNDLED WITH
    1.13.6
